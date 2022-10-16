@@ -3,8 +3,8 @@
 
 ### how to run project
 
-# Enter command "npm install"
+Enter command "npm install"
 
-# Enter command "npm start"
+Enter command "npm start"
 
-# The project will be open on 3000 port
+The project will be open on 3000 port
