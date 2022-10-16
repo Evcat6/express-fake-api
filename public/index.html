@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Fake Rest API</title>
+</head>
+<body>
+    <header class="header" >
+            <h1 class="title" >FAKE REST API</h1>
+            <img class="logo" src="./assets/json.png" />
+    </header>
+    <main class="main">
+        <section >
+            <h1 class="heading" >Try it</h1>
+            <div>
+                <pre class="code_space">
+                <code>
+        fetch('https://jsonfakeapi.netlify.app/api/users/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+                </code>
+            </pre> 
+            <button type="button" id="button" class="btn">Run script</button>
+            <pre class="code_space">
+                <code id="api_result">
+    {}
+                </code>
+            </pre>
+            </div>
+        </section>
+        <section class="resources">
+            <h2>Resources</h2>
+            <ul class="list">
+                <li class="list_item" ><a href="/users">/users</a></li>
+            </ul>
+        </section>
+    </main>
+    <script src="./js/fake_api.js" ></script>
+</body>
+</html>

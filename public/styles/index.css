@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    background-color: #22162B;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title {
+    color: white;
+}
+
+
+.logo {
+    width: 5%;
+}
+
+.main {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.code_space {
+    background-color: #2d2d2d;
+    color: #ccc;
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.token_string {
+    color: #7ec699;
+}
+
+.token_operator {
+    color: #67cdcc;
+}
+
+.token_number {
+    color: #f08d49;
+}
+
+.btn {
+    margin: 35px 0;
+    background-color: rgb(16,185,129);
+    height: 40px;
+    width: 120px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.resources {
+    margin-top: 40px;
+}
+
+.list {
+    list-style: none;
+    margin-top: 13px;
+}
+
+.list_item {
+    display: flex;
+    justify-content: center;
+}
+ 
+
