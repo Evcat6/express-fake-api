@@ -5,8 +5,7 @@ let data = '';
 const elements = [
     {firstClass: 'token_string', secondClass: 'token_operator', uniqueClass: "token_number", title: 'id', body: 1},
     {firstClass: 'token_string', secondClass: 'token_operator', uniqueClass: "token_string", title: 'name', body: "Alexa Perry"},
-    {firstClass: 'token_string', secondClass: 'token_operator', uniqueClass: "token_string", title: 'email', body: "alexa.perry@gmail.com"},
-    {firstClass: 'token_string', secondClass: 'token_operator', uniqueClass: "token_string", title: 'photo', body: "https://randomuser.me/api/portraits/men/3.jpg"}
+    {firstClass: 'token_string', secondClass: 'token_operator', uniqueClass: "token_string", title: 'email', body: "alexa.perry@gmail.com"}
 ];
 
 
