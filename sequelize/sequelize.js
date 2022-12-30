@@ -1,11 +1,10 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
+require('dotenv').config({ path: ".env.local" });
 
-// postgres://ryfdedaf:ZeCAkVXTuv3m5uJ6w5EQWedSNFEu9SAY@mel.db.elephantsql.com/ryfdedaf
-
-const sequelize = new Sequelize('ryfdedaf', 'ryfdedaf', 'ZeCAkVXTuv3m5uJ6w5EQWedSNFEu9SAY', {
-    host: 'mel.db.elephantsql.com',
-    dialect: 'postgres',
+const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
     logging: false
 });
 
