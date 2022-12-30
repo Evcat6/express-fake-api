@@ -6,6 +6,7 @@ const pageRouter = require('./routes/pages');
 const userRouter = require('./routes/user');
 const quoteRouter = require('./routes/quotes');
 const { sequelize } = require('./sequelize/sequelize');
+const cors = require('cors')
 
 
 app.use(express.static(path.join(__dirname, 'public')));
