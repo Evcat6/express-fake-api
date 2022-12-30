@@ -124,7 +124,6 @@ quoteRouter.post('/create-quote', async(req, res) => {
     res.json(newQuote);
 });
 
-// TODO: test for this routes
 
 // update quote by id
 quoteRouter.put('/update-quote', async(req, res) => {
