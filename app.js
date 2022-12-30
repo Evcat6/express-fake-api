@@ -1,37 +1,27 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
-const users = require('./Users')
 const path = require('path');
+const pageRouter = require('./routes/pages');
+const userRouter = require('./routes/user');
+const quoteRouter = require('./routes/quotes');
+const { sequelize } = require('./sequelize/sequelize');
 
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.render('index.html')
-})
-
-app.get('/users', (req, res, next) => {
-    res.json(users)
-    next();
-})
-
-app.get('/users/:id', (req, res) => {
-    res.json(users[req.params.id - 1])
-    next();
-})
+sequelize.sync();
 
 
-app.get('/users/:id/:uniqparam', (req, res, next) => {
-    let param = req.params
-    const user = users.map((user) => user[param.uniqparam])
-    if (req.params.id === 'all') {
-        res.json(user)
-    }
-    res.json(user[param.id])
-    next();
-})
+app.use('/api', userRouter);
+app.use('/api', quoteRouter);
+
+app.use('/', pageRouter);
 
 app.listen(PORT, () => {
     console.log(PORT);
 })
+
+
+module.exports.app = app;
